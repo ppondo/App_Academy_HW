@@ -15,5 +15,4 @@ class Stack
     def peek
       return @ivar[-1]
     end
-
 end
