@@ -1,3 +1,4 @@
+require 'byebug'
 class Board
   attr_accessor :cups 
   attr_reader :name1, :name2
@@ -15,7 +16,8 @@ class Board
   end
 
   def valid_move?(start_pos)
-    unless [0..13].include?(start_pos)
+    # debugger
+    unless (0..13).include?(start_pos)
       raise "Invalid starting cup" 
     end
 
