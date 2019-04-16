@@ -1,6 +1,6 @@
 class Board
-  attr_accessor :cups
-
+  attr_accessor :cups 
+  attr_reader :name1, :name2
   def initialize(name1, name2)
     @name1 = name1
     @name2 = name2
@@ -28,18 +28,33 @@ class Board
     stones = @cups[start_pos].length
     @cups[start_pos] = []
     
-    i = start_pos + 1
-    stones.times do
-      @cups[i%14] << :stone 
+    i = start_pos 
+    while stones > 0
       i += 1
+      i %= 14
+      if current_player_name == @name1
+        unless i == 13
+         @cups[i] << :stone
+          stones -= 1
+        end
+      elsif current_player_name == @name2
+        unless i == 6
+         @cups[i] << :stone
+          stones -= 1
+        end
+      end
     end
-
     self.render
+    self.next_turn(i)
   end
 
   def next_turn(ending_cup_idx)
-    if @cups[ending_cup_idx].empty? 
+    if ending_cup_idx == 13 || ending_cup_idx == 6
+      return :prompt
+    elsif @cups[ending_cup_idx].count == 1
       return :switch
+    elsif @cups[ending_cup_idx].count > 1
+      return ending_cup_idx
     end
   end
 
@@ -66,8 +81,12 @@ class Board
   end
 
   def winner
-    if @cups[6] == @cups[13]
+    if @cups[6].length == @cups[13].length
       return :draw
+    elsif @cups[6].length > @cups[13].length
+      return @name1
+    elsif @cups[13].length > @cups[13].length
+      return @name2
     end
   end
 end
