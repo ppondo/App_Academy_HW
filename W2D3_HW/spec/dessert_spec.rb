@@ -37,10 +37,10 @@ describe Dessert do
 
   describe "#mix!" do
     it "shuffles the ingredient array" do 
-      expect(cake.ingredients).to_not match_array(['pepper', 'fish'])
-      cake.add_ingredient('fish')
       cake.add_ingredient('pepper')
-      expect(cake.ingredients).to match_array(['pepper', 'fish'])
+      cake.add_ingredient('fish')
+      cake.mix!
+      expect(cake.ingredients).to match_array(['fish', 'pepper'])
     end
   end
 
