@@ -15,7 +15,7 @@ class LRUCache
             index = cache.index(el)
             cache.delete_at(index)
             cache << el
-        elsif self.count != size
+        elsif self.count < size
             cache << el 
         elsif !cache.include?(el)
             cache.delete_at(0)
