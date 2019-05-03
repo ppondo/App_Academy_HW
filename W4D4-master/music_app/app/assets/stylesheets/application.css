@@ -1,0 +1,90 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ .link {
+    border-radius: 10px 100px / 120px;
+    background-color: red;
+    color: white;
+    padding: 1em 1.5em;
+    font: bold 17px Trebuchet MS;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    float: right;
+    justify-content: flex-start;
+ }
+
+ h1  {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    color: rgb(255, 0, 0);
+}
+ h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;     
+} 
+ h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+ label {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
+ }
+
+ header {
+    display: flex;
+    justify-content: space-between;
+ }
+ .f {
+    border-radius: 10px 100px / 120px;
+    background-color: red;
+    color: rgb(0, 0, 0);
+    padding: 1em 1.5em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    float: right;
+    justify-content: flex-start
+ }
+ .form-submit-button {
+    border-radius: 10px 100px / 120px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    height: 50px;
+    width: 75px;
+    font: bold 15px Trebuchet MS;  
+    text-decoration: none;  
+    text-shadow:none;
+ }
+
+ .button {
+   font: bold 15px Trebuchet MS;
+   color: white;
+   text-decoration: none;
+   border-radius: 5px 20px / 80px;
+   background: rgb(255, 2, 2)   
+ }
+
+ li {
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+   color: rgb(255, 0, 0);
+ }
+
+ .band {
+   font: bold 15px Trebuchet MS;
+   color: white;
+   text-decoration: none;
+   border-radius: 5px 20px / 80px;
+   background: rgb(255, 2, 2)  
+ }
