@@ -16,7 +16,7 @@ class User < ApplicationRecord
     validates :password, length: {minimum: 6, allow_nil: true}
 
     def self.find_by_credentials(username, password)
-        Self.find_by(username: Self[:username])
+        User.find_by(username: User[:username])
     end
 
     def self.generate_session_token
@@ -39,3 +39,5 @@ class User < ApplicationRecord
         self.session_token ||= self.class.generate_session_token
     end
 end
+
+
