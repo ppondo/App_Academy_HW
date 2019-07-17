@@ -16,6 +16,7 @@ function mysteryScoping2() {
         console.log(x);
     }
     console.log(x);
+    debugger
 }
 mysteryScoping2();
 
@@ -24,6 +25,7 @@ function mysteryScoping3() {
     if (true) {
         var x = 'in block';
         console.log(x);
+        deugger
     }
     console.log(x);
 }
